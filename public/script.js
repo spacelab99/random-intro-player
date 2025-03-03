@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const videoUrls = data.videos;
   const finalImageUrl = data.finalImage;
   const backgroundAudioUrl = data.backgroundAudio;
+  
 
   if (videoUrls.length !== 2) {
     console.error("Expected 2 videos, received: ", videoUrls.length);
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Set the asset URLs dynamically
   finalImage.src = finalImageUrl;
   backgroundAudio.src = backgroundAudioUrl;
+  backgroundAudio.loop = true;
 
   // Set video sources
   video1.src = videoUrls[0];
